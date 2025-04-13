@@ -302,8 +302,10 @@ const getTechLogos = async (techArray)=>{
         })));
     return results;
 };
+let interviewCoverIndex = 0;
 const getRandomInterviewCover = ()=>{
-    const randomIndex = Math.floor(Math.random() * __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["interviewCovers"].length);
+    const randomIndex = interviewCoverIndex % __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["interviewCovers"].length;
+    interviewCoverIndex++;
     return `/covers${__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["interviewCovers"][randomIndex]}`;
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -530,7 +532,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                         alt: "profile-image",
                                         width: 65,
                                         height: 54,
-                                        className: "object-cover"
+                                        className: "rounded-full object-cover size-[120px]"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Agent.tsx",
                                         lineNumber: 154,

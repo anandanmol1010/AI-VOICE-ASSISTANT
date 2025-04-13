@@ -41,7 +41,10 @@ export const getTechLogos = async (techArray: string[]) => {
   return results;
 };
 
+let interviewCoverIndex = 0;
+
 export const getRandomInterviewCover = () => {
-  const randomIndex = Math.floor(Math.random() * interviewCovers.length);
+  const randomIndex = interviewCoverIndex % interviewCovers.length;
+  interviewCoverIndex++;
   return `/covers${interviewCovers[randomIndex]}`;
 };
