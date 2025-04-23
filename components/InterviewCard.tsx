@@ -1,4 +1,5 @@
-import dayjs from "dayjs";
+import FormattedDate from "./FormattedDate";
+import dayjs from "./_dayjs-tz-setup";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,80 +29,104 @@ const InterviewCard = async ({
 
   const badgeColor =
     {
-      Behavioral: "bg-light-400",
-      Mixed: "bg-light-600",
-      Technical: "bg-light-800",
-    }[normalizedType] || "bg-light-600";
+      Behavioral: "bg-emerald-500/20 text-emerald-400",
+      Mixed: "bg-purple-500/20 text-purple-400",
+      Technical: "bg-blue-500/20 text-blue-400",
+    }[normalizedType] || "bg-purple-500/20 text-purple-400";
 
-  const formattedDate = dayjs(
-    feedback?.createdAt || createdAt || Date.now()
-  ).format("MMM D, YYYY");
+  const dateValue = feedback?.createdAt || createdAt || Date.now();
 
   return (
-    <div className="card-border w-[360px] max-sm:w-full min-h-96">
-      <div className="card-interview">
-        <div>
-          {/* Type Badge */}
-          <div
-            className={cn(
-              "absolute top-0 right-0 w-fit px-4 py-2 rounded-bl-lg",
-              badgeColor
-            )}
-          >
-            <p className="badge-text ">{normalizedType}</p>
+    <div className="card-border h-full">
+      <div className="card-interview h-full">
+        {/* Type Badge */}
+        <div
+          className={cn(
+            "absolute top-4 right-4 w-fit px-3 py-1 rounded-full text-xs font-medium",
+            badgeColor
+          )}
+        >
+          {normalizedType}
+        </div>
+
+        <div className="flex flex-col h-full">
+          <div className="flex items-center gap-4 mb-4">
+            {/* Cover Image */}
+            <Image
+              src={getRandomInterviewCover()}
+              alt="cover-image"
+              width={64}
+              height={64}
+              className="rounded-lg object-cover size-16 shadow-md"
+            />
+
+            {/* Interview Role */}
+            <h3 className="text-xl font-semibold capitalize text-white">
+              {role} Interview
+            </h3>
           </div>
 
-          {/* Cover Image */}
-          <Image
-            src={getRandomInterviewCover()}
-            alt="cover-image"
-            width={90}
-            height={90}
-            className="rounded-full object-fit size-[90px]"
-          />
-
-          {/* Interview Role */}
-          <h3 className="mt-5 capitalize">{role} Interview</h3>
-
           {/* Date & Score */}
-          <div className="flex flex-row gap-5 mt-3">
-            <div className="flex flex-row gap-2">
-              <Image
-                src="/calendar.svg"
-                width={22}
-                height={22}
-                alt="calendar"
-              />
-              <p>{formattedDate}</p>
+          <div className="flex flex-row gap-5 mb-4">
+            <div className="flex flex-row gap-2 items-center">
+              <div className="bg-dark-300 p-1.5 rounded-md">
+                <Image
+                  src="/calendar.svg"
+                  width={16}
+                  height={16}
+                  alt="calendar"
+                  className="opacity-80"
+                />
+              </div>
+              <p className="text-sm text-light-200">
+                <FormattedDate date={dateValue} />
+              </p>
             </div>
 
-            <div className="flex flex-row gap-2 items-center">
-              <Image src="/star.svg" width={22} height={22} alt="star" />
-              <p>{feedback?.totalScore || "---"}/100</p>
-            </div>
+            {feedback?.totalScore && (
+              <div className="flex flex-row gap-2 items-center">
+                <div className="bg-dark-300 p-1.5 rounded-md">
+                  <Image
+                    src="/star.svg"
+                    width={16}
+                    height={16}
+                    alt="star"
+                    className="opacity-80"
+                  />
+                </div>
+                <p className="text-sm text-light-200">
+                  <span className="text-primary-300 font-medium">
+                    {feedback.totalScore}
+                  </span>
+                  /100
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Feedback or Placeholder Text */}
-          <p className="line-clamp-2 mt-5">
-            {feedback?.finalAssessment ||
-              "You haven't taken this interview yet. Take it now to improve your skills."}
-          </p>
-        </div>
+          <div className="bg-dark-300/50 rounded-lg p-4 mb-6 flex-grow">
+            <p className="line-clamp-3 text-light-100 text-sm">
+              {feedback?.finalAssessment ||
+                "You haven't taken this interview yet. Take it now to improve your skills."}
+            </p>
+          </div>
 
-        <div className="flex flex-row justify-between">
-          <DisplayTechIcons techStack={techstack} />
+          <div className="flex flex-row justify-between items-center mt-auto">
+            <DisplayTechIcons techStack={techstack} />
 
-          <Button className="btn-primary">
-            <Link
-              href={
-                feedback
-                  ? `/interview/${interviewId}/feedback`
-                  : `/interview/${interviewId}`
-              }
-            >
-              {feedback ? "Check Feedback" : "View Interview"}
-            </Link>
-          </Button>
+            <Button className={feedback ? "btn-primary" : "btn-secondary"}>
+              <Link
+                href={
+                  feedback
+                    ? `/interview/${interviewId}/feedback`
+                    : `/interview/${interviewId}`
+                }
+              >
+                {feedback ? "View Feedback" : "Take Interview"}
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

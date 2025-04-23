@@ -10,8 +10,15 @@ const monaSans = Mona_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "DevHire by Anmol",
+  title: "IntervuBuddy by Anmol",
   description: "An AI-powered platform for preparing for mock interviews",
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="alternate icon" href="/favicon.ico" />
+      </head>
       <body className={`${monaSans.className} antialiased pattern`}>
         {children}
 
