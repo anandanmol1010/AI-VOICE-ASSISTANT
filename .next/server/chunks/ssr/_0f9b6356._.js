@@ -489,6 +489,7 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "cn": (()=>cn),
+    "getInterviewCoverById": (()=>getInterviewCoverById),
     "getRandomInterviewCover": (()=>getRandomInterviewCover),
     "getTechLogos": (()=>getTechLogos)
 });
@@ -530,11 +531,18 @@ const getTechLogos = async (techArray)=>{
         })));
     return results;
 };
+// Original function for backward compatibility
 let interviewCoverIndex = 0;
 const getRandomInterviewCover = ()=>{
     const randomIndex = interviewCoverIndex % __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"].length;
     interviewCoverIndex++;
     return `/covers${__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"][randomIndex]}`;
+};
+const getInterviewCoverById = (id)=>{
+    // Use the first character of the ID to determine the index
+    const charCode = id.charCodeAt(0);
+    const index = charCode % __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"].length;
+    return `/covers${__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"][index]}`;
 };
 }}),
 "[project]/components/ui/button.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
@@ -646,10 +654,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$
 ;
 ;
 ;
-const DisplayTechIcons = async ({ techStack })=>{
+const DisplayTechIcons = async ({ techStack, className })=>{
     const techIcons = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getTechLogos"])(techStack);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-row",
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["cn"])("flex flex-row", className),
         children: techIcons.slice(0, 3).map(({ tech, url }, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["cn"])("relative group bg-dark-300 rounded-full p-2 flex flex-center", index >= 1 && "-ml-3"),
                 children: [
@@ -658,7 +666,7 @@ const DisplayTechIcons = async ({ techStack })=>{
                         children: tech
                     }, void 0, false, {
                         fileName: "[project]/components/DisplayTechIcons.tsx",
-                        lineNumber: 18,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -669,18 +677,18 @@ const DisplayTechIcons = async ({ techStack })=>{
                         className: "size-5"
                     }, void 0, false, {
                         fileName: "[project]/components/DisplayTechIcons.tsx",
-                        lineNumber: 20,
+                        lineNumber: 25,
                         columnNumber: 11
                     }, this)
                 ]
             }, tech, true, {
                 fileName: "[project]/components/DisplayTechIcons.tsx",
-                lineNumber: 11,
+                lineNumber: 16,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/components/DisplayTechIcons.tsx",
-        lineNumber: 9,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 };

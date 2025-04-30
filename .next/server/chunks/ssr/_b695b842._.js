@@ -489,6 +489,7 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "cn": (()=>cn),
+    "getInterviewCoverById": (()=>getInterviewCoverById),
     "getRandomInterviewCover": (()=>getRandomInterviewCover),
     "getTechLogos": (()=>getTechLogos)
 });
@@ -530,11 +531,18 @@ const getTechLogos = async (techArray)=>{
         })));
     return results;
 };
+// Original function for backward compatibility
 let interviewCoverIndex = 0;
 const getRandomInterviewCover = ()=>{
     const randomIndex = interviewCoverIndex % __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"].length;
     interviewCoverIndex++;
     return `/covers${__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"][randomIndex]}`;
+};
+const getInterviewCoverById = (id)=>{
+    // Use the first character of the ID to determine the index
+    const charCode = id.charCodeAt(0);
+    const index = charCode % __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"].length;
+    return `/covers${__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["interviewCovers"][index]}`;
 };
 }}),
 "[project]/components/ui/button.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {

@@ -67,7 +67,7 @@ interface Feedback {
   }
   
   interface GetLatestInterviewsParams {
-    userId: string;
+    userId?: string;
     limit?: number;
   }
   

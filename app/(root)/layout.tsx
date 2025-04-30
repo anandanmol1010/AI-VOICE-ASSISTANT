@@ -4,14 +4,18 @@ import { ReactNode } from "react";
 import { redirect } from "next/navigation";
 
 import { isAuthenticated } from "@/lib/actions/auth.action";
+import { getCurrentUser } from "@/lib/actions/auth.action";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
   const isUserAuthenticated = await isAuthenticated();
   if (!isUserAuthenticated) redirect("/sign-in");
 
+  const user = await getCurrentUser();
+  const userName = user?.name || "User";
+
   return (
-    <div className="root-layout">
-      <nav className="flex items-center justify-between w-full mb-4">
+    <div className="root-layout pt-2">
+      <nav className="flex items-center justify-between w-full mb-0">
         <Link
           href="/"
           className="flex items-center gap-3 hover:opacity-90 transition-opacity"
@@ -32,9 +36,17 @@ const Layout = async ({ children }: { children: ReactNode }) => {
             <p className="text-sm text-[#dddfff]/70 -mt-1">by Anmol</p>
           </div>
         </Link>
+
+        <div className="flex items-center gap-3">
+          <p className="text-3xl font-semibold text-light-100">Hey</p>
+          <span className="inline-block animate-wave origin-bottom-right text-4xl">
+            👋
+          </span>
+          <p className="text-3xl font-semibold text-light-100">{userName}</p>
+        </div>
       </nav>
 
-      <main className="w-full animate-fadeIn">{children}</main>
+      <main className="w-full animate-fadeIn pt-0">{children}</main>
     </div>
   );
 };

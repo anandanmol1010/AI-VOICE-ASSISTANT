@@ -181,11 +181,11 @@
   .btn-upload {
     @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-lg transition-all duration-200;
   }
-  
+
   .btn-primary {
     @apply w-fit bg-primary-400 text-white hover:bg-primary-300 rounded-full font-semibold px-6 py-2.5 cursor-pointer min-h-10 transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2;
   }
-  
+
   .btn-secondary {
     @apply w-fit bg-dark-200 text-primary-200 hover:bg-dark-300 rounded-full font-semibold px-6 py-2.5 cursor-pointer min-h-10 transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2;
   }
@@ -233,7 +233,7 @@
       @apply z-10 flex items-center justify-center blue-gradient rounded-full size-[120px] relative shadow-md;
 
       .animate-speak {
-        @apply absolute inline-flex size-5/6 animate-ping rounded-full bg-primary-300 opacity-75;
+        @apply absolute inline-flex size-5/6 animate-pulse-slow rounded-full bg-primary-300 opacity-75;
       }
     }
 
@@ -331,6 +331,14 @@
   animation: fadeIn 0.4s ease-in-out;
 }
 
+@utility animate-wave {
+  animation: wave 1.5s infinite;
+}
+
+@utility animate-pulse-slow {
+  animation: pulseSlow 3s infinite;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -339,5 +347,47 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulseSlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
   }
 }

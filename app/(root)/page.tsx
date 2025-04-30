@@ -14,20 +14,20 @@ async function Home() {
   const user = await getCurrentUser();
 
   const [userInterviews, allInterview] = await Promise.all([
-    getInterviewsByUserId(user?.id!),
-    getLatestInterviews({ userId: user?.id! }),
+    getInterviewsByUserId(user?.id),
+    getLatestInterviews({ userId: user?.id }),
   ]);
 
   // Limit the number of interviews shown on the home page
-  const limitedUserInterviews = userInterviews?.slice(0, 3);
-  const limitedAvailableInterviews = allInterview?.slice(0, 6);
+  const limitedUserInterviews = userInterviews?.slice(0, 3) || [];
+  const limitedAvailableInterviews = allInterview?.slice(0, 6) || [];
 
-  const hasPastInterviews = userInterviews?.length! > 0;
-  const hasUpcomingInterviews = allInterview?.length! > 0;
+  const hasPastInterviews = (userInterviews?.length || 0) > 0;
+  const hasUpcomingInterviews = (allInterview?.length || 0) > 0;
 
   // Check if there are more interviews than shown on the home page
-  const hasMoreUserInterviews = userInterviews?.length! > 3;
-  const hasMoreAvailableInterviews = allInterview?.length! > 6;
+  const hasMoreUserInterviews = (userInterviews?.length || 0) > 3;
+  const hasMoreAvailableInterviews = (allInterview?.length || 0) > 6;
 
   return (
     <>

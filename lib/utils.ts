@@ -41,10 +41,18 @@ export const getTechLogos = async (techArray: string[]) => {
   return results;
 };
 
+// Original function for backward compatibility
 let interviewCoverIndex = 0;
-
 export const getRandomInterviewCover = () => {
   const randomIndex = interviewCoverIndex % interviewCovers.length;
   interviewCoverIndex++;
   return `/covers${interviewCovers[randomIndex]}`;
+};
+
+// New function that uses interview ID to generate a consistent cover image
+export const getInterviewCoverById = (id: string) => {
+  // Use the first character of the ID to determine the index
+  const charCode = id.charCodeAt(0);
+  const index = charCode % interviewCovers.length;
+  return `/covers${interviewCovers[index]}`;
 };

@@ -95,13 +95,19 @@ export async function getLatestInterviews(
 ): Promise<Interview[] | null> {
   const { userId, limit = 20 } = params;
 
-  const interviews = await db
+  // Create a base query
+  let query = db
     .collection("interviews")
     .orderBy("createdAt", "desc")
-    .where("finalized", "==", true)
-    .where("userId", "!=", userId)
-    .limit(limit)
-    .get();
+    .where("finalized", "==", true);
+
+  // Only add the userId filter if userId is defined
+  if (userId) {
+    query = query.where("userId", "!=", userId);
+  }
+
+  // Execute the query with limit
+  const interviews = await query.limit(limit).get();
 
   return interviews.docs.map((doc) => ({
     id: doc.id,
@@ -110,8 +116,13 @@ export async function getLatestInterviews(
 }
 
 export async function getInterviewsByUserId(
-  userId: string
+  userId?: string
 ): Promise<Interview[] | null> {
+  // If userId is undefined or null, return an empty array
+  if (!userId) {
+    return [];
+  }
+
   const interviews = await db
     .collection("interviews")
     .where("userId", "==", userId)
