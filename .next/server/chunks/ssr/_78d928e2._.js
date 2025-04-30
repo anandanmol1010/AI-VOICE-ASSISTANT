@@ -347,13 +347,24 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getFeedbackByInterviewI
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getLatestInterviews(params) {
     const { userId, limit = 20 } = params;
-    const interviews = await __TURBOPACK__imported__module__$5b$project$5d2f$firebase$2f$admin$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].collection("interviews").orderBy("createdAt", "desc").where("finalized", "==", true).where("userId", "!=", userId).limit(limit).get();
+    // Create a base query
+    let query = __TURBOPACK__imported__module__$5b$project$5d2f$firebase$2f$admin$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].collection("interviews").orderBy("createdAt", "desc").where("finalized", "==", true);
+    // Only add the userId filter if userId is defined
+    if (userId) {
+        query = query.where("userId", "!=", userId);
+    }
+    // Execute the query with limit
+    const interviews = await query.limit(limit).get();
     return interviews.docs.map((doc)=>({
             id: doc.id,
             ...doc.data()
         }));
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getInterviewsByUserId(userId) {
+    // If userId is undefined or null, return an empty array
+    if (!userId) {
+        return [];
+    }
     const interviews = await __TURBOPACK__imported__module__$5b$project$5d2f$firebase$2f$admin$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].collection("interviews").where("userId", "==", userId).orderBy("createdAt", "desc").get();
     return interviews.docs.map((doc)=>({
             id: doc.id,

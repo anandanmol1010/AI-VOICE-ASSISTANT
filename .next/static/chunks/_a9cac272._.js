@@ -1450,13 +1450,14 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     lineNumber: 770,
                                                     columnNumber: 27
                                                 }, this),
-                                                " or click ",
+                                                " or click",
+                                                " ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                     children: '"Reset Permission"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 770,
-                                                    columnNumber: 58
+                                                    lineNumber: 771,
+                                                    columnNumber: 19
                                                 }, this),
                                                 " directly from this popup"
                                             ]
@@ -1469,7 +1470,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                             children: "Refresh the page and try again"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 772,
+                                            lineNumber: 773,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -1492,12 +1493,12 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                 children: "Refresh Page"
                             }, void 0, false, {
                                 fileName: "[project]/components/Agent.tsx",
-                                lineNumber: 776,
+                                lineNumber: 777,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 775,
+                            lineNumber: 776,
                             columnNumber: 13
                         }, this)
                     ]
