@@ -189,16 +189,17 @@ export const feedbackSchema = z.object({
   finalAssessment: z.string(),
 });
 
+// Map interview types to specific illustrations
+export const interviewIllustrations = {
+  "Technical": "/illustrations/technical-interview.svg",
+  "Behavioral": "/illustrations/behavioral-interview.svg",
+  "Mixed": "/illustrations/mixed-interview.svg",
+  // Default illustration if type doesn't match
+  "default": "/illustrations/default-interview.svg"
+};
+
+// Keep this for backward compatibility
 export const interviewCovers = [
-  "/adobe.png",
-  "/amazon.png",
-  "/facebook.png",
-  "/hostinger.png",
-  "/pinterest.png",
-  "/quora.png",
-  "/reddit.png",
-  "/skype.png",
-  "/spotify.png",
   "/telegram.png",
   "/tiktok.png",
   "/yahoo.png",

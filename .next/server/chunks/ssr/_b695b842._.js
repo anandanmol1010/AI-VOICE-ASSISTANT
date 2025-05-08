@@ -9,6 +9,7 @@ __turbopack_context__.s({
     "dummyInterviews": (()=>dummyInterviews),
     "feedbackSchema": (()=>feedbackSchema),
     "interviewCovers": (()=>interviewCovers),
+    "interviewIllustrations": (()=>interviewIllustrations),
     "interviewer": (()=>interviewer),
     "mappings": (()=>mappings)
 });
@@ -198,16 +199,14 @@ const feedbackSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
     areasForImprovement: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].array(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string()),
     finalAssessment: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string()
 });
+const interviewIllustrations = {
+    "Technical": "/illustrations/technical-interview.svg",
+    "Behavioral": "/illustrations/behavioral-interview.svg",
+    "Mixed": "/illustrations/mixed-interview.svg",
+    // Default illustration if type doesn't match
+    "default": "/illustrations/default-interview.svg"
+};
 const interviewCovers = [
-    "/adobe.png",
-    "/amazon.png",
-    "/facebook.png",
-    "/hostinger.png",
-    "/pinterest.png",
-    "/quora.png",
-    "/reddit.png",
-    "/skype.png",
-    "/spotify.png",
     "/telegram.png",
     "/tiktok.png",
     "/yahoo.png"
@@ -347,13 +346,24 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getFeedbackByInterviewI
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getLatestInterviews(params) {
     const { userId, limit = 20 } = params;
-    const interviews = await __TURBOPACK__imported__module__$5b$project$5d2f$firebase$2f$admin$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].collection("interviews").orderBy("createdAt", "desc").where("finalized", "==", true).where("userId", "!=", userId).limit(limit).get();
+    // Create a base query
+    let query = __TURBOPACK__imported__module__$5b$project$5d2f$firebase$2f$admin$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].collection("interviews").orderBy("createdAt", "desc").where("finalized", "==", true);
+    // Only add the userId filter if userId is defined
+    if (userId) {
+        query = query.where("userId", "!=", userId);
+    }
+    // Execute the query with limit
+    const interviews = await query.limit(limit).get();
     return interviews.docs.map((doc)=>({
             id: doc.id,
             ...doc.data()
         }));
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getInterviewsByUserId(userId) {
+    // If userId is undefined or null, return an empty array
+    if (!userId) {
+        return [];
+    }
     const interviews = await __TURBOPACK__imported__module__$5b$project$5d2f$firebase$2f$admin$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].collection("interviews").where("userId", "==", userId).orderBy("createdAt", "desc").get();
     return interviews.docs.map((doc)=>({
             id: doc.id,

@@ -6,7 +6,8 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import DisplayTechIcons from "./DisplayTechIcons";
 
-import { cn, getRandomInterviewCover } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { interviewIllustrations } from "@/constants";
 import { getFeedbackByInterviewId } from "@/lib/actions/general.action";
 
 const InterviewCard = async ({
@@ -27,12 +28,8 @@ const InterviewCard = async ({
 
   const normalizedType = /mix/gi.test(type) ? "Mixed" : type;
 
-  const badgeColor =
-    {
-      Behavioral: "bg-emerald-500/20 text-emerald-400",
-      Mixed: "bg-purple-500/20 text-purple-400",
-      Technical: "bg-blue-500/20 text-blue-400",
-    }[normalizedType] || "bg-purple-500/20 text-purple-400";
+  // Always use #51a2ff color for all interview types
+  const badgeColor = "bg-[#51a2ff]/20 text-[#51a2ff]";
 
   const dateValue = feedback?.createdAt || createdAt || Date.now();
 
@@ -51,14 +48,16 @@ const InterviewCard = async ({
 
         <div className="flex flex-col h-full">
           <div className="flex items-center gap-4 mb-4">
-            {/* Cover Image */}
-            <Image
-              src={getRandomInterviewCover()}
-              alt="cover-image"
-              width={64}
-              height={64}
-              className="rounded-lg object-cover size-16 shadow-md"
-            />
+            {/* Interview Type Illustration */}
+            <div className="rounded-lg size-16 flex items-center justify-center shadow-md overflow-hidden bg-[#51a2ff]/10 border border-[#51a2ff]/20">
+              <Image
+                src={interviewIllustrations[normalizedType as keyof typeof interviewIllustrations] || interviewIllustrations.default}
+                alt={`${normalizedType} interview illustration`}
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+            </div>
 
             {/* Interview Role */}
             <h3 className="text-xl font-semibold capitalize text-white">

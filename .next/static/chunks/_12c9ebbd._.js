@@ -51,6 +51,7 @@ __turbopack_context__.s({
     "dummyInterviews": (()=>dummyInterviews),
     "feedbackSchema": (()=>feedbackSchema),
     "interviewCovers": (()=>interviewCovers),
+    "interviewGradients": (()=>interviewGradients),
     "interviewer": (()=>interviewer),
     "mappings": (()=>mappings)
 });
@@ -240,16 +241,30 @@ const feedbackSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
     areasForImprovement: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].array(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string()),
     finalAssessment: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string()
 });
+const interviewGradients = {
+    "Technical": {
+        from: "#3b82f6",
+        to: "#1e40af",
+        pattern: "linear"
+    },
+    "Behavioral": {
+        from: "#10b981",
+        to: "#047857",
+        pattern: "linear"
+    },
+    "Mixed": {
+        from: "#8b5cf6",
+        to: "#5b21b6",
+        pattern: "linear"
+    },
+    // Default gradient if type doesn't match
+    "default": {
+        from: "#51a2ff",
+        to: "#2563eb",
+        pattern: "linear"
+    }
+};
 const interviewCovers = [
-    "/adobe.png",
-    "/amazon.png",
-    "/facebook.png",
-    "/hostinger.png",
-    "/pinterest.png",
-    "/quora.png",
-    "/reddit.png",
-    "/skype.png",
-    "/spotify.png",
     "/telegram.png",
     "/tiktok.png",
     "/yahoo.png"

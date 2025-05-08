@@ -1,5 +1,9 @@
 {
-  "/(root)/interview/page": "app/(root)/interview/page.js",
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
+  "/(root)/interview/[id]/feedback/page": "app/(root)/interview/[id]/feedback/page.js",
+  "/(root)/interview/[id]/page": "app/(root)/interview/[id]/page.js",
+  "/(root)/interviews/user/page": "app/(root)/interviews/user/page.js",
   "/(root)/page": "app/(root)/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }

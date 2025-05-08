@@ -1106,49 +1106,118 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                         lineNumber: 618,
                         columnNumber: 11
                     }, this),
-                    callStatus === "ACTIVE" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "btn-disconnect flex items-center gap-2 px-7 py-2.5 text-base",
-                        onClick: ()=>handleDisconnect(),
+                    callStatus === "ACTIVE" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col items-center space-y-2",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                width: "20",
-                                height: "20",
-                                viewBox: "0 0 24 24",
-                                fill: "none",
-                                stroke: "currentColor",
-                                strokeWidth: "2",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "btn-disconnect flex items-center gap-2 px-8 py-3 text-base font-medium shadow-lg",
+                                onClick: ()=>handleDisconnect(),
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                        d: "M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        width: "20",
+                                        height: "20",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Agent.tsx",
+                                                lineNumber: 660,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                                x1: "23",
+                                                y1: "1",
+                                                x2: "1",
+                                                y2: "23"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Agent.tsx",
+                                                lineNumber: 661,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/components/Agent.tsx",
-                                        lineNumber: 659,
+                                        lineNumber: 649,
                                         columnNumber: 15
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
-                                        x1: "23",
-                                        y1: "1",
-                                        x2: "1",
-                                        y2: "23"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Agent.tsx",
-                                        lineNumber: 660,
-                                        columnNumber: 15
-                                    }, this)
+                                    "End Interview"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Agent.tsx",
-                                lineNumber: 648,
+                                lineNumber: 645,
                                 columnNumber: 13
                             }, this),
-                            "End Interview"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm text-light-100/70 max-w-xs text-center",
+                                children: "Click this button when the interviewer says goodbye or thanks you for your time"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Agent.tsx",
+                                lineNumber: 665,
+                                columnNumber: 13
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Agent.tsx",
                         lineNumber: 644,
+                        columnNumber: 11
+                    }, this),
+                    callStatus === "FINISHED" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col items-center space-y-2",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "btn-disconnect flex items-center gap-2 px-8 py-3 text-base font-medium shadow-lg opacity-70 cursor-not-allowed",
+                            disabled: true,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    width: "20",
+                                    height: "20",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Agent.tsx",
+                                            lineNumber: 688,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                            x1: "23",
+                                            y1: "1",
+                                            x2: "1",
+                                            y2: "23"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Agent.tsx",
+                                            lineNumber: 689,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/Agent.tsx",
+                                    lineNumber: 677,
+                                    columnNumber: 15
+                                }, this),
+                                "Interview Ended"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Agent.tsx",
+                            lineNumber: 673,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/Agent.tsx",
+                        lineNumber: 672,
                         columnNumber: 11
                     }, this)
                 ]
@@ -1166,19 +1235,19 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                             className: "size-2 bg-success-100 rounded-full animate-pulse"
                         }, void 0, false, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 670,
+                            lineNumber: 700,
                             columnNumber: 13
                         }, this),
                         "Interview in progress - Speak clearly into your microphone"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Agent.tsx",
-                    lineNumber: 669,
+                    lineNumber: 699,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Agent.tsx",
-                lineNumber: 668,
+                lineNumber: 698,
                 columnNumber: 9
             }, this),
             showPermissionDialog && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1191,7 +1260,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                             children: "Permissions Required"
                         }, void 0, false, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 680,
+                            lineNumber: 710,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1202,7 +1271,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                     children: "This interview requires microphone access and optionally camera access."
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 684,
+                                    lineNumber: 714,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1213,7 +1282,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                             children: "Microphone (Required):"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 689,
+                                            lineNumber: 719,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1223,33 +1292,33 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     children: "Needed to hear your responses during the interview"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 693,
+                                                    lineNumber: 723,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Required for the AI to understand and respond to you"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 694,
+                                                    lineNumber: 724,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Without microphone access, the interview cannot proceed"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 695,
+                                                    lineNumber: 725,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 692,
+                                            lineNumber: 722,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 688,
+                                    lineNumber: 718,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1259,7 +1328,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                             children: "Camera (Optional):"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 701,
+                                            lineNumber: 731,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1269,39 +1338,39 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     children: "Creates a more realistic interview experience"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 705,
+                                                    lineNumber: 735,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Helps practice maintaining eye contact and body language"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 706,
+                                                    lineNumber: 736,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Simulates a real video interview environment"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 709,
+                                                    lineNumber: 739,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 704,
+                                            lineNumber: 734,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 700,
+                                    lineNumber: 730,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 683,
+                            lineNumber: 713,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1313,7 +1382,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                     children: "Continue Without Camera"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 714,
+                                    lineNumber: 744,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1322,24 +1391,24 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                     children: "Enable Camera"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 720,
+                                    lineNumber: 750,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 713,
+                            lineNumber: 743,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Agent.tsx",
-                    lineNumber: 679,
+                    lineNumber: 709,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Agent.tsx",
-                lineNumber: 678,
+                lineNumber: 708,
                 columnNumber: 9
             }, this),
             showMicWarningDialog && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1363,12 +1432,12 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                         d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Agent.tsx",
-                                        lineNumber: 743,
+                                        lineNumber: 773,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 736,
+                                    lineNumber: 766,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1376,13 +1445,13 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                     children: "Microphone Access Required"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 750,
+                                    lineNumber: 780,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 735,
+                            lineNumber: 765,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1393,7 +1462,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                     children: "Microphone access was denied. This interview requires microphone access to proceed."
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 755,
+                                    lineNumber: 785,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1401,7 +1470,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                     children: "To enable your microphone:"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 759,
+                                    lineNumber: 789,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -1414,14 +1483,14 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     children: '"ⓘ"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 762,
+                                                    lineNumber: 792,
                                                     columnNumber: 29
                                                 }, this),
                                                 " icon in your browser's address bar"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 761,
+                                            lineNumber: 791,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1431,13 +1500,13 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     children: '"Off"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 767,
+                                                    lineNumber: 797,
                                                     columnNumber: 32
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 765,
+                                            lineNumber: 795,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1447,7 +1516,7 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     children: '"On"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 770,
+                                                    lineNumber: 800,
                                                     columnNumber: 27
                                                 }, this),
                                                 " or click",
@@ -1456,33 +1525,33 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                                     children: '"Reset Permission"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Agent.tsx",
-                                                    lineNumber: 771,
+                                                    lineNumber: 801,
                                                     columnNumber: 19
                                                 }, this),
                                                 " directly from this popup"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 769,
+                                            lineNumber: 799,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Refresh the page and try again"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Agent.tsx",
-                                            lineNumber: 773,
+                                            lineNumber: 803,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Agent.tsx",
-                                    lineNumber: 760,
+                                    lineNumber: 790,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 754,
+                            lineNumber: 784,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1493,23 +1562,23 @@ const Agent = ({ userName, userId, interviewId, feedbackId, type, questions })=>
                                 children: "Refresh Page"
                             }, void 0, false, {
                                 fileName: "[project]/components/Agent.tsx",
-                                lineNumber: 777,
+                                lineNumber: 807,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Agent.tsx",
-                            lineNumber: 776,
+                            lineNumber: 806,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Agent.tsx",
-                    lineNumber: 734,
+                    lineNumber: 764,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Agent.tsx",
-                lineNumber: 733,
+                lineNumber: 763,
                 columnNumber: 9
             }, this)
         ]
